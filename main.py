@@ -8,8 +8,7 @@ class GeoAPI:
     API_KEY = "d81015613923e3e435231f2740d5610b"
     LAT = "-35.836948753554054"
     LON = "-61.870523905384076"
-    URL = "https://api.openweathermap.org/data/2.5/weather?"
-
+    
     def __init__(self):
         pass
 
@@ -30,7 +29,8 @@ class GeoAPI:
     @staticmethod
     def get_weather(params):
         """Static method to get the weather from the API."""
-        response = requests.get(GeoAPI.URL, params=params)
+        URL = "https://api.openweathermap.org/data/2.5/weather?"
+        response = requests.get(URL, params=params)
         return response.json()
 
 #Ejercicio 2.1
